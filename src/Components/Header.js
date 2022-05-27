@@ -2,15 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-export default function Header({title, searchBar}) {
+export default function Header({ title, searchBar }) {
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-
-          
           {title}
-
         </Link>
         <button
           className="navbar-toggler"
@@ -36,7 +33,7 @@ export default function Header({title, searchBar}) {
               </Link>
             </li>
           </ul>
-         
+
           {searchBar ? (
             <form className="d-flex" role="search">
               <input

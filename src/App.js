@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { AddTodo } from "./MyComponents/AddTodo";
-import { Footer } from "./MyComponents/Footer";
-import Header from "./MyComponents/Header";
-import { Todos } from "./MyComponents/Todos";
+import { AddTodo } from "./Components/AddTodo";
+import { Footer } from "./Components/Footer";
+import Header from "./Components/Header";
+import { Todos } from "./Components/Todos";
+import { Posts } from "./Components/Pages/Posts";
 
 const PropsPage = () => {
   let initTodo;
@@ -64,8 +65,9 @@ function App() {
 
         <Routes>
           <Route path="/" element={<PropsPage />} />
+          <Route path="/" element={<PropsPage />} />
         </Routes>
-
+        <Posts />
         <Footer />
       </Router>
     </>
