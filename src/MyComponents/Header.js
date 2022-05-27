@@ -7,6 +7,7 @@ export default function Header({title, searchBar}) {
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
+
           
           {title}
 
