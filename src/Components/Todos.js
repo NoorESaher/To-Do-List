@@ -1,5 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 import {TodoItem} from "./TodoItem";
+
 
 export const Todos = (props) => {
   let myStyle = {
@@ -7,6 +10,7 @@ export const Todos = (props) => {
     margin: "40px auto"
   }
   return (
+    
     <div className="container" style={myStyle}>
 
         <h3 className="text-center my-3">Todos List</h3>
@@ -15,8 +19,17 @@ export const Todos = (props) => {
         props.todos.map((todo)=>{
           return (<TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete}/>)
         })}
-        
-    
-    </div>
-  )
+         
+        <br/><br/>
+         <Link to="/Posts">
+                Click Here to See Posts
+              </Link>
+  </div>
+
+  );
 }
+
+        
+        
+        
+  
